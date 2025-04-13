@@ -5,7 +5,12 @@
 
 /* vintage theme */
 @font-face {
-	font-family: 'Abril Fatface';
-	src: url('/fonts/AbrilFatface.ttf');
+	font-family: 'Google Sans Display Bold';
+	src: url('/fonts/GoogleSansDisplay-Bold.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Google Sans Display Regular';
+	src: url('/fonts/GoogleSansDisplay-Regular.ttf');
 	font-display: swap;
 }

@@ -17,10 +17,9 @@ const config = {
 			pollInterval: 1000,
 		}
 	},
-
-	paths: query => {
+	alias: {
 		$db: './src/db'
-	},
+	}
 	
 };
 

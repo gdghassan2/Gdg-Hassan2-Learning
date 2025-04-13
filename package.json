@@ -1,5 +1,5 @@
 {
-	"name": "sveltekit-elysia",
+	"name": "gdg-hassan2-learning",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -25,6 +25,7 @@
 		"@types/bcryptjs": "^2.4.6",
 		"@types/node": "^20.14.10",
 		"autoprefixer": "^10.4.19",
+		"better-sqlite3": "^11.7.0",
 		"drizzle-kit": "^0.22.8",
 		"lucia": "^3.2.0",
 		"postcss": "^8.4.38",
@@ -48,7 +49,10 @@
 		"@tailwindcss/forms": "^0.5.7",
 		"arctic": "^1.9.1",
 		"argon2": "^0.40.3",
+		"axios": "^1.7.9",
 		"bcryptjs": "^2.4.3",
+		"caniuse-lite": "^1.0.30001705",
+		"cloudflare": "^4.1.0",
 		"drizzle-orm": "^0.31.2",
 		"elysia": "^1.0.26",
 		"sib-api-v3-sdk": "^8.5.0"

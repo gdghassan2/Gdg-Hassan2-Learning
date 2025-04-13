@@ -4,6 +4,7 @@ import * as schema from "../../../../db/schema";
 import { type RequestEvent, redirect } from "@sveltejs/kit";
 import { generateIdFromEntropySize, Lucia, type User } from "lucia";
 import { initiateLucia, initiateGoogleAuthClient, type DatabaseUserAttributes } from "$lib/server/auth";
+import { createAccount, createWebsite } from "$lib/hestia/createStudent";
 
 import type {PageServerLoad, PageServerLoadEvent } from "./$types";
 
@@ -115,6 +116,11 @@ export const load: PageServerLoad = async (event) => {
             updatedAt: Date.now()
         });
         await createSessionCookie(event, lucia, id);
+
+        await createAccount(username, generateIdFromEntropySize(16), user.email, user.given_name, user.family_name);
+        await createWebsite(username);
+
+
         return {
             username: user.given_name?? username
         }

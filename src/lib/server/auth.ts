@@ -4,7 +4,6 @@ import { drizzle } from "drizzle-orm/d1";
 import { dev } from "$app/environment";
 import * as schema from "../../db/schema";
 import { Google } from "arctic";
-import type { ServerLoadEvent } from "@sveltejs/kit";
 
 
 export function initiateGoogleAuthClient(gci:string, gcs:string, url:string) {
@@ -28,6 +27,7 @@ export function initiateLucia(D1: D1Database) {
                 return {
                     // attributes has the type of DatabaseUserAttributes
                     id: attributes.id,
+                    onBoardingStep: attributes.onBoardingStep,
                     googleId: attributes.googleId,
                     username: attributes.username,
                     firstName: attributes.firstName,
@@ -49,6 +49,7 @@ declare module "lucia" {
 
 export interface DatabaseUserAttributes {
     id: string;
+    onBoardingStep: string;
 	username: string;
     firstName: string;
     lastName: string;
